@@ -13,11 +13,11 @@ int main( void ) {
   while( 1 ) {
     if(x) {
       GPIOA->ODR ^= GPIO_ODR_ODR5;
-      delay( 90000000 );
+      delay( 900000 );
     }
     else {
       GPIOA->ODR ^= GPIO_ODR_ODR5;
-      delay( 900 );
+      delay( 900000 );
     }
     x++;
     if( x == 2 ) x == 0;

@@ -1,10 +1,11 @@
-# 🚀 STM32F103RB CMSIS Bare-Metal Project — No HAL, No IDE
+# STM32F103RB CMSIS Bare-Metal Project — No HAL, No IDE
 
 > ✅ Чистый embedded на регистрах — без HAL, без CubeMX, без GUI-IDE  
 > ✅ Сборка через CMake + Make  
 > ✅ Прошивка через OpenOCD  
 > ✅ Готов к CI/CD, Docker, Jenkins  
-> ✅ Минимальный, масштабируемый, контролируемый
+> ✅ Минимальный, масштабируемый, контролируемый  
+> ✅ **Теперь с поддержкой VSCode — breakpoint, step-by-step, просмотр регистров!**
 
 ---
 
@@ -16,6 +17,7 @@
 - Прошивается **через ST-Link** — без GUI
 - Генерирует `.hex`, `.bin`, `.map`
 - Готов к расширению: UART, SPI, I2C, FreeRTOS
+- **Теперь можно редактировать, отлаживать и смотреть регистры в VSCode**
 
 ---
 
@@ -47,8 +49,12 @@
 
 - **ОС**: Linux (Manjaro, Ubuntu), WSL2
 - **Компилятор**: `arm-none-eabi-gcc`
-- **Инструменты**: `cmake`, `make`, `openocd`
+- **Инструменты**: `cmake`, `make`, `openocd`, `arm-none-eabi-gdb`
 - **Плата**: Nucleo-F103RB (или совместимая)
 - **Программатор**: ST-Link (встроен в Nucleo)
 
+Установка на Manjaro:
+
+```bash
+sudo pacman -S arm-none-eabi-gcc arm-none-eabi-gdb openocd cmake make git base-devel
 

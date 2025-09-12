@@ -11,9 +11,9 @@ endif()
 
 
 # Явно указываем исходники
-file(GLOB_RECURSE SOURCES
-    "src/*.c"
-    "startup/*.s"
+set(SOURCES
+    "src/main.c"
+    "cmsis/device/Source/Templates/gcc/startup_stm32f103xb.s"
     "cmsis/device/Source/Templates/system_stm32f1xx.c"
 )
 
@@ -37,6 +37,7 @@ target_link_options(${PROJECT_NAME}.elf PRIVATE
     -nostdlib
     -lc
     -lgcc
+    -specs=nosys.specs
     -Wl,--gc-sections
     -Wl,-Map=${PROJECT_NAME}.map
 )
