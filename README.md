@@ -1,4 +1,4 @@
-# 🚀 STM32F103RB CMSIS Bare-Metal Project — No HAL, No IDE
+# STM32F103RB CMSIS Bare-Metal Project — No HAL, No IDE
 
 > ✅ Чистый embedded на регистрах — без HAL, без CubeMX, без GUI-IDE  
 > ✅ Сборка через CMake + Make  
